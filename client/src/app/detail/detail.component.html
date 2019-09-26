@@ -1,0 +1,25 @@
+<h1>Commerce Manager</h1> 
+<br>
+<h2>Product Details</h2>
+<div class="container">
+        <div class="row">
+          <div class="col-sm">
+              <span><h4>Name:</h4>{{viewThisPet.name}}</span>
+              <h4>Qty:</h4>{{viewThisPet.qty}}
+              <h4>Price:</h4>{{viewThisPet.price}}
+          </div>
+          <div class="col-sm">
+    
+          </div>
+        </div>
+      </div>
+      
+
+
+ <Button><a [routerLink]="['/products']">Back</a></Button>
+ <ng-container *ngIf="qtyZero; else elseTemplate">
+        <button (click)="DeletePet(viewThisPet._id)" >DELETE</button>     
+</ng-container>
+<ng-template #elseTemplate>
+    <button (click)="DeletePet(viewThisPet._id)" disabled>DELETE</button>     
+</ng-template>        

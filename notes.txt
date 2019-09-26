@@ -1,0 +1,84 @@
+<div *ngFor="let error of errors" >
+        <ul class="text-danger"><li >{{ error }}</li></ul>
+</div> 
+ 
+ 
+ 
+ <ng-container *ngIf="qtyZero; else elseTemplate">
+        <button (click)="DeletePet(viewThisPet._id)" disabled>Like'em</button>     
+</ng-container>
+<ng-template #elseTemplate>
+    <button (click)="DeletePet(viewThisPet._id)" >Like'em</button>     
+</ng-template>     
+    
+    
+    
+    
+    finish checkone in h
+    
+    
+      let petCount=Pet.find({name: req.body.name}).count();
+      if(petCount >0 ) {  
+  
+  
+  
+    <ng-container *ngIf="flgClicked; else elseTemplate">
+            <button (click)="LikePet(viewThisPet._id)" disabled>Like'em</button>     
+    </ng-container>
+    <ng-template #elseTemplate>
+        <button (click)="LikePet(viewThisPet._id)" >Like'em</button>     
+    </ng-template>
+
+
+
+
+<ng-container *ngIf=data.type>
+  <div *ngFor="let error of data.errors">
+    <p class="text-danger">{{ error.message  }}</p>
+  </div>
+</ng-container>
+
+
+<div *ngFOr="let error of errors" >
+    {{ error }}
+</div>
+
+                <button mat-raised-button color="primary">
+                <a [routerLink]="['/edit', Pet._id]">Details</a>
+                </button>
+                <button (click)="deletePet(Pet._id)">Delete</button>            
+
+v              <form (submit)="DeletePet(Pet._id)">
+                    <input type="submit" value="Adopt">
+                </form>
+    deletePet(id) {
+      console.log("################", id);
+      const obs = this._httpService.deletePet(id);
+      obs.subscribe(data => {
+        this.getPetsFromService();
+      });
+      
+    }
+
+
+            home.html
+                       <button mat-raised-button color="primary">
+                <a [routerLink]="['/edit']", 1>Edit</a>
+            </button>
+            <button mat-raised-button color="primary">
+                <a [routerLink]="['/delete']" [queryParams]="1">Delete</a>
+            </button>
+            <button (click)="selectAuthorToEdit(Author._id)">Edit</button>
+            <button (click)="deleteAuthor(Author._id)">Delete</button>
+
+
+
+
+
+                <tr>
+        <td>Stephen King</td>
+        <td>
+            <button (click)="selectAuthorToEdit(Author._id)">Edit</button>
+            <button (click)="deleteAuthor(Author._id)">Delete</button>
+        </td>        
+        </tr>

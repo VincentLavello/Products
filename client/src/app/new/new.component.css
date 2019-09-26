@@ -1,0 +1,12 @@
+
+.form-group {
+    display: block
+}
+span{
+    position:relative;
+    margin-right:-20px
+  }
+  input[type='number']{
+    padding-left:20px;
+    text-align:left;
+  }

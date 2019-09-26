@@ -1,0 +1,39 @@
+<div class="col-md-6">
+<h1>Commerce Manager</h1>
+<button >
+    <a [routerLink]="['/products/new']">Add New Product</a>
+</button>
+
+<h3>Product List</h3>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+        <th class="col-md-1">ID</th>
+        <th class="col-md-4">Name</th>
+        <th class="col-md-1">QTY</th>
+        <th class="col-md-3">Price</th>
+        <th class="col-md-3">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container  *ngFor="let Pet of Pets">
+        <tr>
+            <td>{{Pet._id}} </td>
+            <td>{{Pet.name}}</td>
+            <td>{{Pet.qty}} </td>
+            <td>{{Pet.price}}</td>
+            <td>
+                <button >
+                    <a [routerLink]="['/products/edit', Pet._id]">Edit</a>
+                </button>
+                <button >
+                    <a [routerLink]="['/products', Pet._id]">Details</a>
+                </button>
+            </td>
+        </tr>
+         </ng-container>
+    </tbody>
+    </table>
+    </div>
+      
+

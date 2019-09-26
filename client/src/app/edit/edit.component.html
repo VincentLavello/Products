@@ -1,0 +1,32 @@
+<h1>Commerce Manager</h1>
+<button [routerLink]="['/products']">Home</button>
+<h1 class="text-danger">Update Product</h1>
+<div *ngFor="let error of errors" >
+    <ul class="text-danger"><li >{{ error }}</li></ul>
+  </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="col order-last">
+        <form (submit)="editPet(PetToEdit._id)">
+            <div class="form-group" style="display: block">
+              <label>Name</label>
+              <input type="text" name="PetToEdit.name" [(ngModel)]="PetToEdit.name"><br>
+            </div>
+            <div class="form-group" style="display: block">
+                <label>QTY:</label><br>
+              <input type="text" name="PetToEdit.qty" [(ngModel)]="PetToEdit.qty">
+            </div>
+            <div class="form-group" style="display: block">
+                <label>Price:</label><br>
+              <input type="text" name="PetToEdit.price" [(ngModel)]="PetToEdit.price">
+            </div>        
+            <input type="submit" value="UPDATE">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button (click)="resetProduct()">RESET</button>            
+  
